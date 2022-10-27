@@ -60,7 +60,7 @@ pipeline {
                     sh "aws s3 cp target/${JARNAME} s3://hartest/lambda-test/"
 
 
-                    sh "aws lambda update-function-code --function-name test  --zip-file fileb://target/${JARNAME}  --region us-east-1"
+                    sh "aws lambda update-function-code --function-name test  --zip-file fileb://target/${JARNAME}"
 
                 }          
             }
